@@ -8,7 +8,9 @@
 
 Aterm の IP アドレスが分からなくても、起動するだけで同一ネットワーク内の Aterm を見つけ、クイック設定 Web (設定画面) をブラウザで開けます。
 
-![AtermDetector の画面](docs/images/app.png)
+![AtermDetector の画面 (ブリッジ機を検出)](docs/images/app.png)
+
+![AtermDetector の画面 (ローカルルータ機を検出)](docs/images/app-router.png)
 
 ## 機能
 

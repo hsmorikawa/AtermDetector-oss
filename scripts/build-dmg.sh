@@ -22,8 +22,9 @@ ICON_SIZE=128
 
 work="$(mktemp -d)"
 stage="$work/stage"
-mkdir -p "$stage/.background"
-trap 'hdiutil detach "/Volumes/$VOL" >/dev/null 2>&1 || true; rm -rf "$work"' EXIT
+mnt="$work/mnt"
+mkdir -p "$stage/.background" "$mnt"
+trap 'hdiutil detach "$mnt" -force >/dev/null 2>&1 || true; rm -rf "$work"' EXIT
 
 cp -R "$APP" "$stage/"
 ln -s /Applications "$stage/Applications"
@@ -34,13 +35,17 @@ rw="$work/rw.dmg"
 hdiutil create -srcfolder "$stage" -volname "$VOL" -fs HFS+ \
   -format UDRW -ov "$rw" >/dev/null
 
-# マウントしてレイアウト
-hdiutil attach "$rw" -mountpoint "/Volumes/$VOL" -nobrowse -noautoopen >/dev/null
+# 一意なマウントポイントにマウント (= 既に同名 "$VOL" ボリュームが
+# マウントされていても衝突しないよう /Volumes/$VOL を使わない)。
+hdiutil attach "$rw" -mountpoint "$mnt" -nobrowse -noautoopen >/dev/null
 
-# Finder でレイアウト設定 (自動化権限が無ければ skip、DMG 自体は成立)
+# Finder でレイアウト設定。disk はボリューム名でなくマウントポイントから
+# 特定するため、同名ボリュームが他にあっても曖昧にならない。
+# (自動化権限が無い等で失敗しても DMG 自体は成立する)
 if osascript >/dev/null 2>&1 <<APPLESCRIPT
 tell application "Finder"
-  tell disk "$VOL"
+  set theDisk to disk of (POSIX file "$mnt" as alias)
+  tell theDisk
     open
     set current view of container window to icon view
     set toolbar visible of container window to false
@@ -65,7 +70,7 @@ else
   echo "[build-dmg] WARN: Finder 自動化不可 — 既定レイアウトで続行 (Applications リンクは表示されます)" >&2
 fi
 
-hdiutil detach "/Volumes/$VOL" >/dev/null 2>&1 || true
+hdiutil detach "$mnt" -force >/dev/null 2>&1 || true
 
 # 圧縮された配布用 DMG に変換
 rm -f "$OUT"

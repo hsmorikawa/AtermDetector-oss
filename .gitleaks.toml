@@ -1,0 +1,39 @@
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "high-entropy-base64"
+description = "High entropy base64 string (possible secret)"
+regex = '''[A-Za-z0-9+/]{40,}={0,2}'''
+entropy = 4.5
+secretGroup = 0
+
+[[rules]]
+id = "japanese-patient-info"
+description = "Japanese medical patient identifiers"
+regex = '''(患者[ID番号]|カルテ番号|MRN|レセプト[番号ID])'''
+
+# ===========================================================================
+# Allowlist
+# AGENTS.md / CLAUDE.md / README.md / global-config / templates / docs では
+# 「禁止語の列挙」自体が存在する（"MRN を commit するな" 等）。これらは
+# メタ的記述で、実 patient ID / secret は含まない前提なのでスキャンから除外する。
+# ※実データ commit 防御は別レイヤ：
+#   - pre-commit hook + gitleaks protect --staged
+#   - レビュー
+#   - DB / .env / 検体ファイル（*.dcm, *.fastq.gz 等）はそもそも commit 禁止規約
+# ===========================================================================
+[allowlist]
+description = "Documentation files that intentionally enumerate forbidden keywords"
+paths = [
+    '''^AGENTS\.md$''',
+    '''^CLAUDE\.md$''',
+    '''^README\.md$''',
+    '''^global-config/.*\.md$''',
+    '''^templates/.*''',
+    '''^_manual_/.*''',
+    '''^docs/.*\.md$''',
+    '''^devlog/.*\.md$''',
+]

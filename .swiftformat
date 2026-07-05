@@ -1,0 +1,20 @@
+# SwiftFormat configuration (= dev-bootstrap baseline、AGENTS.md §12.3)
+# `swiftformat --lint .` (= local-ci.sh) で差分検出時は push abort。
+
+--swiftversion 6.0
+
+--exclude Pods,Carthage,.build,DerivedData,build,Generated,**/*.generated.swift
+
+--indent 4
+--linebreaks lf
+--maxwidth 140
+
+--importgrouping testable-bottom
+
+--trailingcommas always
+
+--operatorfunc spaced
+
+--self init-only
+
+--disable redundantSelf

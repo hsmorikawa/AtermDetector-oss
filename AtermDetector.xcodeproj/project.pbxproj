@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F0689731E3691C4C30478EE /* CLIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540C394D4329BE73A4D7B00 /* CLIOptions.swift */; };
+		10A0F777D1C1F8EF9E0BB856 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */; };
+		1332F77A8FE24DC498ECBCBF /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */; };
+		1605CB92CA327A88DBA1B385 /* CLIFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C69F6E1AF714A91CF1FCD /* CLIFormatterTests.swift */; };
+		176EC547FED2A8BBE47489A4 /* AtermCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263EBEC592AA48D96E3888EC /* AtermCLI.swift */; };
+		181B59DC47A7C846DAC54F1B /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */; };
+		19700B447F8ADDD0A48A9CA4 /* IPv4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ADB9805E27247D4080EC2 /* IPv4.swift */; };
+		1C66891B8589FE07D00AFBCD /* TestFakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4691A3D28D4986118700B /* TestFakes.swift */; };
+		2DFB88C08534A4832871186D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43600316F443EE18A63227D /* ContentView.swift */; };
+		2F53E3E3E7D2F3C5BC3F2BBC /* SysMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5BB9CBDC8BA4BFF74A9F0A /* SysMode.swift */; };
+		318C5A2C9447A5C708B6D8DE /* ArpTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEFEE532617CD5A284209A4 /* ArpTable.swift */; };
+		34BCA0916A0084C3A79BACE4 /* ScanEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE356D42A3FEFD9FC687B3 /* ScanEngineTests.swift */; };
+		3778C3A136365A056D1AE43C /* CLIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A5E489C323AC1948912D0 /* CLIFormatter.swift */; };
+		3D56C49347393B611A3AED08 /* CLIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540C394D4329BE73A4D7B00 /* CLIOptions.swift */; };
+		402480407AF743D1718B6537 /* AtermClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145967C480682FDC4E69F3A /* AtermClient.swift */; };
+		417E8AC1F31440906C1CD1E2 /* CLIOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B1350808FF5119DA3D5D /* CLIOptionsTests.swift */; };
+		42026CEDD363102554BF4DCD /* AtermResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE7869111D91A883FFF590 /* AtermResponse.swift */; };
+		428C2378259FF686B6EA52F7 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */; };
+		4575138A9AB34C4B4FD24AA8 /* ScanRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E686D22FE136220CB1FA9 /* ScanRange.swift */; };
+		45D1F361D1628BEEFEE7F1FC /* ScanRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E686D22FE136220CB1FA9 /* ScanRange.swift */; };
+		4DB443606662B4A12BF3DA34 /* ArpTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEFEE532617CD5A284209A4 /* ArpTable.swift */; };
+		5014536DC1DFA0902A7AE78A /* SingleProbeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F040839DF1DFB5BA005D /* SingleProbeView.swift */; };
+		51014634B321965989D36151 /* AtermResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE7869111D91A883FFF590 /* AtermResponse.swift */; };
+		5EB8CABD0C6010AC60D0BA95 /* IPv4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ADB9805E27247D4080EC2 /* IPv4.swift */; };
+		5ED58FD7ED592A22A8437663 /* SysModeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB02444469CF4F3833DDCF74 /* SysModeTests.swift */; };
+		670CFBC5C21F393534DB6C2B /* ScanRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E686D22FE136220CB1FA9 /* ScanRange.swift */; };
+		68E12C3797856B2CF01D5A6E /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */; };
+		71D662C3C25EBBFF63853FDB /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C1138C6BEDA9C7EEC7DE41 /* MockURLProtocol.swift */; };
+		80D8A7EFECFBBC74595C47E8 /* ProbeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFB0247335B609472E5946 /* ProbeResult.swift */; };
+		818AD221606697F2371C5903 /* ProbeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFB0247335B609472E5946 /* ProbeResult.swift */; };
+		87ED410BFC8DCD3617E3E440 /* ArpTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007D478A3D69B22890F07BC /* ArpTableTests.swift */; };
+		946EEE178CE8E06BCE9AD694 /* ArpTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEFEE532617CD5A284209A4 /* ArpTable.swift */; };
+		964C5D499187C1ABACC0EFC0 /* AtermDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A1B697B78B417AE889964 /* AtermDevice.swift */; };
+		9BE026DA39F6D0323E6FD143 /* ProbeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFB0247335B609472E5946 /* ProbeResult.swift */; };
+		A436B144909F04CBE04BDC4C /* ScanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977ED6E4234F8A8194AAC58 /* ScanEngine.swift */; };
+		AB47D16D0A70D37BF0CB9733 /* CLIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0A5E489C323AC1948912D0 /* CLIFormatter.swift */; };
+		AD0168B5E583839EAB439BC0 /* AtermDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A1B697B78B417AE889964 /* AtermDevice.swift */; };
+		AF81FED310F003D6495FBD56 /* SysMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5BB9CBDC8BA4BFF74A9F0A /* SysMode.swift */; };
+		B2215B8A093E260E80B844BD /* AtermDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DA4138B1BCB3384BADEE3A /* AtermDetectorApp.swift */; };
+		B5B2B3B36B6FCD78173A9BFD /* AtermDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A1B697B78B417AE889964 /* AtermDevice.swift */; };
+		B850B3CD4DCCC8F2F1CA6CD2 /* AtermClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7522F3B2ED5D71AA4496F6C8 /* AtermClientTests.swift */; };
+		C08BF312D972E717BCE6E15F /* AtermClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145967C480682FDC4E69F3A /* AtermClient.swift */; };
+		C18377B2645D25B049611A38 /* AtermResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE7869111D91A883FFF590 /* AtermResponse.swift */; };
+		C4E65CC73965588818A0B939 /* ScanRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329D3C0B109EDF7C62DB77 /* ScanRangeTests.swift */; };
+		CED5DA07317DB5E1E8FBE94E /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */; };
+		D4B9EC3691C9FB0975AE993E /* ScanViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC32539E69666FC3C1F68E8 /* ScanViewModelTests.swift */; };
+		DF7B2CD0302EDB5FBF97F8A7 /* SysMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5BB9CBDC8BA4BFF74A9F0A /* SysMode.swift */; };
+		E0CC73CD74CF3914E5162615 /* ScanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977ED6E4234F8A8194AAC58 /* ScanEngine.swift */; };
+		E607FE08DED246343554C276 /* ScanEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977ED6E4234F8A8194AAC58 /* ScanEngine.swift */; };
+		E69E10172F4633ED27A8474E /* IPv4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5ADB9805E27247D4080EC2 /* IPv4.swift */; };
+		EA36A3A1A2BAE603F66E6B68 /* AtermResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A504793F5FA9414D32379AF /* AtermResponseTests.swift */; };
+		FA48B16F1506A395F0586E46 /* AtermClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145967C480682FDC4E69F3A /* AtermClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		067D6E678BA04D93A238FDC3 /* AtermDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtermDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1977ED6E4234F8A8194AAC58 /* ScanEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEngine.swift; sourceTree = "<group>"; };
+		2540C394D4329BE73A4D7B00 /* CLIOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIOptions.swift; sourceTree = "<group>"; };
+		263EBEC592AA48D96E3888EC /* AtermCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermCLI.swift; sourceTree = "<group>"; };
+		3DCFB0247335B609472E5946 /* ProbeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeResult.swift; sourceTree = "<group>"; };
+		436A1B697B78B417AE889964 /* AtermDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermDevice.swift; sourceTree = "<group>"; };
+		4EE1F040839DF1DFB5BA005D /* SingleProbeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProbeView.swift; sourceTree = "<group>"; };
+		5E0A5E489C323AC1948912D0 /* CLIFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIFormatter.swift; sourceTree = "<group>"; };
+		6C5ADB9805E27247D4080EC2 /* IPv4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPv4.swift; sourceTree = "<group>"; };
+		74DA4138B1BCB3384BADEE3A /* AtermDetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermDetectorApp.swift; sourceTree = "<group>"; };
+		7522F3B2ED5D71AA4496F6C8 /* AtermClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermClientTests.swift; sourceTree = "<group>"; };
+		7A504793F5FA9414D32379AF /* AtermResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermResponseTests.swift; sourceTree = "<group>"; };
+		7A5BB9CBDC8BA4BFF74A9F0A /* SysMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysMode.swift; sourceTree = "<group>"; };
+		824E686D22FE136220CB1FA9 /* ScanRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRange.swift; sourceTree = "<group>"; };
+		99FBB907A1E790F16D885199 /* AtermDetector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AtermDetector.entitlements; sourceTree = "<group>"; };
+		9BEFEE532617CD5A284209A4 /* ArpTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpTable.swift; sourceTree = "<group>"; };
+		A145967C480682FDC4E69F3A /* AtermClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermClient.swift; sourceTree = "<group>"; };
+		A3329D3C0B109EDF7C62DB77 /* ScanRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRangeTests.swift; sourceTree = "<group>"; };
+		A98BBBBD4577AEA51B6A31A0 /* AtermDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtermDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE4691A3D28D4986118700B /* TestFakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFakes.swift; sourceTree = "<group>"; };
+		B060E1DC5CFC5C4BBF3B4C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		B8CE7869111D91A883FFF590 /* AtermResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtermResponse.swift; sourceTree = "<group>"; };
+		C007D478A3D69B22890F07BC /* ArpTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArpTableTests.swift; sourceTree = "<group>"; };
+		D3FE356D42A3FEFD9FC687B3 /* ScanEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanEngineTests.swift; sourceTree = "<group>"; };
+		E348405EE3E6BC484C18E4B9 /* aterm-cli */ = {isa = PBXFileReference; includeInIndex = 0; path = "aterm-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3C69F6E1AF714A91CF1FCD /* CLIFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIFormatterTests.swift; sourceTree = "<group>"; };
+		EB02444469CF4F3833DDCF74 /* SysModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysModeTests.swift; sourceTree = "<group>"; };
+		F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		F43600316F443EE18A63227D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9C1138C6BEDA9C7EEC7DE41 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		FFC32539E69666FC3C1F68E8 /* ScanViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModelTests.swift; sourceTree = "<group>"; };
+		FFD8B1350808FF5119DA3D5D /* CLIOptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIOptionsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1A00193CFDD05A386D513F97 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				99FBB907A1E790F16D885199 /* AtermDetector.entitlements */,
+				74DA4138B1BCB3384BADEE3A /* AtermDetectorApp.swift */,
+				F43600316F443EE18A63227D /* ContentView.swift */,
+				B060E1DC5CFC5C4BBF3B4C96 /* Info.plist */,
+				4EE1F040839DF1DFB5BA005D /* SingleProbeView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		667E621553C5C3C5435E15E3 /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				263EBEC592AA48D96E3888EC /* AtermCLI.swift */,
+				5E0A5E489C323AC1948912D0 /* CLIFormatter.swift */,
+				2540C394D4329BE73A4D7B00 /* CLIOptions.swift */,
+			);
+			path = CLI;
+			sourceTree = "<group>";
+		};
+		7194FC806702A2F4DF6D6A4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E348405EE3E6BC484C18E4B9 /* aterm-cli */,
+				A98BBBBD4577AEA51B6A31A0 /* AtermDetector.app */,
+				067D6E678BA04D93A238FDC3 /* AtermDetectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8395A9A980FB5DB3495DEC0E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C007D478A3D69B22890F07BC /* ArpTableTests.swift */,
+				7522F3B2ED5D71AA4496F6C8 /* AtermClientTests.swift */,
+				7A504793F5FA9414D32379AF /* AtermResponseTests.swift */,
+				EA3C69F6E1AF714A91CF1FCD /* CLIFormatterTests.swift */,
+				FFD8B1350808FF5119DA3D5D /* CLIOptionsTests.swift */,
+				D3FE356D42A3FEFD9FC687B3 /* ScanEngineTests.swift */,
+				A3329D3C0B109EDF7C62DB77 /* ScanRangeTests.swift */,
+				FFC32539E69666FC3C1F68E8 /* ScanViewModelTests.swift */,
+				EB02444469CF4F3833DDCF74 /* SysModeTests.swift */,
+				E48F291178EEAC0D445770E6 /* Helpers */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		8E4B063772628C0C28BA95B7 = {
+			isa = PBXGroup;
+			children = (
+				1A00193CFDD05A386D513F97 /* App */,
+				667E621553C5C3C5435E15E3 /* CLI */,
+				E2C732FD75D7769244128552 /* Core */,
+				8395A9A980FB5DB3495DEC0E /* Tests */,
+				7194FC806702A2F4DF6D6A4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2C732FD75D7769244128552 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9BEFEE532617CD5A284209A4 /* ArpTable.swift */,
+				A145967C480682FDC4E69F3A /* AtermClient.swift */,
+				436A1B697B78B417AE889964 /* AtermDevice.swift */,
+				B8CE7869111D91A883FFF590 /* AtermResponse.swift */,
+				6C5ADB9805E27247D4080EC2 /* IPv4.swift */,
+				F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */,
+				3DCFB0247335B609472E5946 /* ProbeResult.swift */,
+				1977ED6E4234F8A8194AAC58 /* ScanEngine.swift */,
+				824E686D22FE136220CB1FA9 /* ScanRange.swift */,
+				B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */,
+				7A5BB9CBDC8BA4BFF74A9F0A /* SysMode.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E48F291178EEAC0D445770E6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9C1138C6BEDA9C7EEC7DE41 /* MockURLProtocol.swift */,
+				ACE4691A3D28D4986118700B /* TestFakes.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0388AA6F6F5C9F3E1AF73D56 /* AtermDetectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C08E5F72EBA921E5672C974C /* Build configuration list for PBXNativeTarget "AtermDetectorTests" */;
+			buildPhases = (
+				55F5B7E1B280C14FBF8CF6A6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AtermDetectorTests;
+			packageProductDependencies = (
+			);
+			productName = AtermDetectorTests;
+			productReference = 067D6E678BA04D93A238FDC3 /* AtermDetectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54B54A06C2784382F46671B5 /* AtermDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4545C44714E3DD7C9EE2FE1E /* Build configuration list for PBXNativeTarget "AtermDetector" */;
+			buildPhases = (
+				89D5ABD41FA32D4DDCF7BDFE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AtermDetector;
+			packageProductDependencies = (
+			);
+			productName = AtermDetector;
+			productReference = A98BBBBD4577AEA51B6A31A0 /* AtermDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6BDCB2053A52877518E5A37 /* aterm-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E17803FF4466D9BA355AD51 /* Build configuration list for PBXNativeTarget "aterm-cli" */;
+			buildPhases = (
+				B8D748ED2070301E4A2FE55D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "aterm-cli";
+			packageProductDependencies = (
+			);
+			productName = "aterm-cli";
+			productReference = E348405EE3E6BC484C18E4B9 /* aterm-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB9710721977B6B492A3B4D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					54B54A06C2784382F46671B5 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0314F06FE8623CC1D8430AD9 /* Build configuration list for PBXProject "AtermDetector" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8E4B063772628C0C28BA95B7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7194FC806702A2F4DF6D6A4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B54A06C2784382F46671B5 /* AtermDetector */,
+				0388AA6F6F5C9F3E1AF73D56 /* AtermDetectorTests */,
+				A6BDCB2053A52877518E5A37 /* aterm-cli */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55F5B7E1B280C14FBF8CF6A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB443606662B4A12BF3DA34 /* ArpTable.swift in Sources */,
+				87ED410BFC8DCD3617E3E440 /* ArpTableTests.swift in Sources */,
+				C08BF312D972E717BCE6E15F /* AtermClient.swift in Sources */,
+				B850B3CD4DCCC8F2F1CA6CD2 /* AtermClientTests.swift in Sources */,
+				964C5D499187C1ABACC0EFC0 /* AtermDevice.swift in Sources */,
+				51014634B321965989D36151 /* AtermResponse.swift in Sources */,
+				EA36A3A1A2BAE603F66E6B68 /* AtermResponseTests.swift in Sources */,
+				AB47D16D0A70D37BF0CB9733 /* CLIFormatter.swift in Sources */,
+				1605CB92CA327A88DBA1B385 /* CLIFormatterTests.swift in Sources */,
+				3D56C49347393B611A3AED08 /* CLIOptions.swift in Sources */,
+				417E8AC1F31440906C1CD1E2 /* CLIOptionsTests.swift in Sources */,
+				E69E10172F4633ED27A8474E /* IPv4.swift in Sources */,
+				71D662C3C25EBBFF63853FDB /* MockURLProtocol.swift in Sources */,
+				181B59DC47A7C846DAC54F1B /* NetworkInfo.swift in Sources */,
+				80D8A7EFECFBBC74595C47E8 /* ProbeResult.swift in Sources */,
+				E607FE08DED246343554C276 /* ScanEngine.swift in Sources */,
+				34BCA0916A0084C3A79BACE4 /* ScanEngineTests.swift in Sources */,
+				670CFBC5C21F393534DB6C2B /* ScanRange.swift in Sources */,
+				C4E65CC73965588818A0B939 /* ScanRangeTests.swift in Sources */,
+				10A0F777D1C1F8EF9E0BB856 /* ScanViewModel.swift in Sources */,
+				D4B9EC3691C9FB0975AE993E /* ScanViewModelTests.swift in Sources */,
+				AF81FED310F003D6495FBD56 /* SysMode.swift in Sources */,
+				5ED58FD7ED592A22A8437663 /* SysModeTests.swift in Sources */,
+				1C66891B8589FE07D00AFBCD /* TestFakes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D5ABD41FA32D4DDCF7BDFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				946EEE178CE8E06BCE9AD694 /* ArpTable.swift in Sources */,
+				402480407AF743D1718B6537 /* AtermClient.swift in Sources */,
+				B2215B8A093E260E80B844BD /* AtermDetectorApp.swift in Sources */,
+				B5B2B3B36B6FCD78173A9BFD /* AtermDevice.swift in Sources */,
+				42026CEDD363102554BF4DCD /* AtermResponse.swift in Sources */,
+				2DFB88C08534A4832871186D /* ContentView.swift in Sources */,
+				19700B447F8ADDD0A48A9CA4 /* IPv4.swift in Sources */,
+				68E12C3797856B2CF01D5A6E /* NetworkInfo.swift in Sources */,
+				9BE026DA39F6D0323E6FD143 /* ProbeResult.swift in Sources */,
+				E0CC73CD74CF3914E5162615 /* ScanEngine.swift in Sources */,
+				45D1F361D1628BEEFEE7F1FC /* ScanRange.swift in Sources */,
+				428C2378259FF686B6EA52F7 /* ScanViewModel.swift in Sources */,
+				5014536DC1DFA0902A7AE78A /* SingleProbeView.swift in Sources */,
+				2F53E3E3E7D2F3C5BC3F2BBC /* SysMode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8D748ED2070301E4A2FE55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				318C5A2C9447A5C708B6D8DE /* ArpTable.swift in Sources */,
+				176EC547FED2A8BBE47489A4 /* AtermCLI.swift in Sources */,
+				FA48B16F1506A395F0586E46 /* AtermClient.swift in Sources */,
+				AD0168B5E583839EAB439BC0 /* AtermDevice.swift in Sources */,
+				C18377B2645D25B049611A38 /* AtermResponse.swift in Sources */,
+				3778C3A136365A056D1AE43C /* CLIFormatter.swift in Sources */,
+				0F0689731E3691C4C30478EE /* CLIOptions.swift in Sources */,
+				5EB8CABD0C6010AC60D0BA95 /* IPv4.swift in Sources */,
+				1332F77A8FE24DC498ECBCBF /* NetworkInfo.swift in Sources */,
+				818AD221606697F2371C5903 /* ProbeResult.swift in Sources */,
+				A436B144909F04CBE04BDC4C /* ScanEngine.swift in Sources */,
+				4575138A9AB34C4B4FD24AA8 /* ScanRange.swift in Sources */,
+				CED5DA07317DB5E1E8FBE94E /* ScanViewModel.swift in Sources */,
+				DF7B2CD0302EDB5FBF97F8A7 /* SysMode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1BB6B5BFCEEE3B843795D360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hsmorikawa.aterm-cli";
+				PRODUCT_NAME = "aterm-cli";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		22178CB031E5E131CE0269B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsmorikawa.AtermDetectorTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5891C668271F23594CA3ACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		792212C5AFEADB77DD054A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hsmorikawa.aterm-cli";
+				PRODUCT_NAME = "aterm-cli";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A8B83A93F3CF0CCF9431D865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/AtermDetector.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsmorikawa.AtermDetector;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BB96C6EB32756BD628113863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsmorikawa.AtermDetectorTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC7B4829B8EBBFA4AD62EF10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/AtermDetector.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsmorikawa.AtermDetector;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C769D86AC2EFEA3FC64E2FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0314F06FE8623CC1D8430AD9 /* Build configuration list for PBXProject "AtermDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5891C668271F23594CA3ACE2 /* Debug */,
+				C769D86AC2EFEA3FC64E2FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4545C44714E3DD7C9EE2FE1E /* Build configuration list for PBXNativeTarget "AtermDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC7B4829B8EBBFA4AD62EF10 /* Debug */,
+				A8B83A93F3CF0CCF9431D865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E17803FF4466D9BA355AD51 /* Build configuration list for PBXNativeTarget "aterm-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB6B5BFCEEE3B843795D360 /* Debug */,
+				792212C5AFEADB77DD054A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C08E5F72EBA921E5672C974C /* Build configuration list for PBXNativeTarget "AtermDetectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22178CB031E5E131CE0269B0 /* Debug */,
+				BB96C6EB32756BD628113863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB9710721977B6B492A3B4D2 /* Project object */;
+}

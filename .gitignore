@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Xcode / Swift
+DerivedData/
+build/
+.build/
+*.xcresult
+xcuserdata/
+*.xcuserstate
+*.swp
+*.swo
+*~
+
+# Editor
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
+token*.json
+
+# Local work
+scratch/
+docs/internal/
+HANDOFF.md
+logs/

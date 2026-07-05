@@ -1,0 +1,80 @@
+# XcodeGen project definition — source of truth (.xcodeproj は生成物、`xcodegen generate` で再生成)
+name: AtermDetector
+options:
+  bundleIdPrefix: com.hsmorikawa
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+targets:
+  AtermDetector:
+    type: application
+    platform: macOS
+    sources:
+      - App
+      - Core
+    entitlements:
+      path: App/AtermDetector.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: AtermDetector
+        LSApplicationCategoryType: public.app-category.utilities
+        NSLocalNetworkUsageDescription: ローカルネットワーク上の Aterm を検出するため、同一ネットワーク内の機器に照会を送信します。
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hsmorikawa.AtermDetector
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ENABLE_HARDENED_RUNTIME: true
+        CODE_SIGN_STYLE: Automatic
+  aterm-cli:
+    type: tool
+    platform: macOS
+    # コマンドライン版。UI 非依存の Core を再利用する。
+    sources:
+      - CLI
+      - Core
+    settings:
+      base:
+        PRODUCT_NAME: aterm-cli
+        PRODUCT_BUNDLE_IDENTIFIER: com.hsmorikawa.aterm-cli
+  AtermDetectorTests:
+    type: bundle.unit-test
+    platform: macOS
+    # Core を直接コンパイルする standalone test bundle (TEST_HOST なし)。
+    # app hosted にするとテスト実行のたびにアプリが起動し自動スキャンが走るため避ける。
+    # CLI の純粋部品 (Options/Formatter) も直接コンパイルする (@main は含めない)。
+    sources:
+      - Tests
+      - Core
+      - path: CLI/CLIOptions.swift
+      - path: CLI/CLIFormatter.swift
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+schemes:
+  AtermDetector:
+    build:
+      targets:
+        AtermDetector: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - AtermDetectorTests
+  aterm-cli:
+    build:
+      targets:
+        aterm-cli: all
+    run:
+      config: Debug

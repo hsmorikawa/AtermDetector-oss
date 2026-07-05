@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FBDCEAE6764FDC4C07A2C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0A0E10BE5055A7EEA8C259 /* Assets.xcassets */; };
 		0F0689731E3691C4C30478EE /* CLIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540C394D4329BE73A4D7B00 /* CLIOptions.swift */; };
 		10A0F777D1C1F8EF9E0BB856 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66E23E5E43E5BE9EFB16A7F /* ScanViewModel.swift */; };
 		1332F77A8FE24DC498ECBCBF /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */; };
@@ -90,6 +91,7 @@
 		E348405EE3E6BC484C18E4B9 /* aterm-cli */ = {isa = PBXFileReference; includeInIndex = 0; path = "aterm-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3C69F6E1AF714A91CF1FCD /* CLIFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIFormatterTests.swift; sourceTree = "<group>"; };
 		EB02444469CF4F3833DDCF74 /* SysModeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysModeTests.swift; sourceTree = "<group>"; };
+		EF0A0E10BE5055A7EEA8C259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0BAF3B4E57489CC0173E4A4 /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		F43600316F443EE18A63227D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9C1138C6BEDA9C7EEC7DE41 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		1A00193CFDD05A386D513F97 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EF0A0E10BE5055A7EEA8C259 /* Assets.xcassets */,
 				99FBB907A1E790F16D885199 /* AtermDetector.entitlements */,
 				74DA4138B1BCB3384BADEE3A /* AtermDetectorApp.swift */,
 				F43600316F443EE18A63227D /* ContentView.swift */,
@@ -210,6 +213,7 @@
 			buildConfigurationList = 4545C44714E3DD7C9EE2FE1E /* Build configuration list for PBXNativeTarget "AtermDetector" */;
 			buildPhases = (
 				89D5ABD41FA32D4DDCF7BDFE /* Sources */,
+				6298E231029E9803074CF36C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +277,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6298E231029E9803074CF36C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FBDCEAE6764FDC4C07A2C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55F5B7E1B280C14FBF8CF6A6 /* Sources */ = {

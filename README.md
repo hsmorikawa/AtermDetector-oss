@@ -1,5 +1,9 @@
 # AtermDetector
 
+[![Release](https://img.shields.io/github/v/release/hsmorikawa/AtermDetector-oss?label=release)](../../releases/latest)
+[![Platform](https://img.shields.io/badge/platform-macOS%2014%2B-blue)](../../releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](#license)
+
 > ローカルネットワーク上の NEC Aterm ルーターを検出して一覧表示する macOS アプリ
 
 Aterm の IP アドレスが分からなくても、起動するだけで同一ネットワーク内の Aterm を見つけ、クイック設定 Web (設定画面) をブラウザで開けます。

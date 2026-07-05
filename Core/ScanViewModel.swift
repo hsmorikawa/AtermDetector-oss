@@ -33,6 +33,9 @@ final class ScanViewModel {
 
     private static let logger = Logger(subsystem: "com.hsmorikawa.AtermDetector", category: "scan")
 
+    private var isFirstScan = true
+    private let autoRetryDelay: Duration
+
     private let networkInfo: any NetworkInfoProviding
     private let prober: any AtermProbing
     private let engine: ScanEngine
@@ -40,11 +43,13 @@ final class ScanViewModel {
     init(
         networkInfo: any NetworkInfoProviding = SystemNetworkInfo(),
         prober: any AtermProbing = AtermClient(),
-        maxConcurrent: Int = ScanEngine.defaultMaxConcurrent
+        maxConcurrent: Int = ScanEngine.defaultMaxConcurrent,
+        autoRetryDelay: Duration = .seconds(2)
     ) {
         self.networkInfo = networkInfo
         self.prober = prober
         self.engine = ScanEngine(prober: prober, maxConcurrent: maxConcurrent)
+        self.autoRetryDelay = autoRetryDelay
     }
 
     /// スキャン開始 (実行中の二重起動は無視)。範囲が導出できないときは failed。
@@ -54,16 +59,22 @@ final class ScanViewModel {
             state = .failed(message: "ネットワーク情報を取得できません。ネットワーク接続を確認してください。")
             return
         }
+        let allowRetry = isFirstScan
+        isFirstScan = false
         scanRange = range
         devices = []
         state = .scanning(done: 0, total: range.targets.count)
 
         scanTask = Task { [weak self] in
             guard let self else { return }
-            let found = await self.engine.scan(targets: range.targets) { done, total in
-                Task { @MainActor in
-                    guard self.isScanning else { return }
-                    self.state = .scanning(done: done, total: total)
+            var found = await self.runScan(range.targets)
+            // 起動直後は macOS のローカルネットワーク許可が有効化される前に最初の
+            // スキャンが空振りすることがある (macOS 15 以降のレース)。許可済みでも
+            // 0 件になり得るため、起動時スキャンが 0 件なら一度だけ自動再試行する。
+            if allowRetry, found.isEmpty, !Task.isCancelled {
+                try? await Task.sleep(for: self.autoRetryDelay)
+                if !Task.isCancelled {
+                    found = await self.runScan(range.targets)
                 }
             }
             guard !Task.isCancelled else { return }
@@ -71,6 +82,16 @@ final class ScanViewModel {
             self.state = .finished(count: found.count)
             // 件数のみ debug ログ。機器名/IP/MAC は識別子のため永続ログに残さない
             Self.logger.debug("scan finished: \(found.count, privacy: .public) device(s)")
+        }
+    }
+
+    /// 1 回分のスキャン実行 (進捗を state に反映)。
+    private func runScan(_ targets: [String]) async -> [AtermDevice] {
+        await engine.scan(targets: targets) { done, total in
+            Task { @MainActor in
+                guard self.isScanning else { return }
+                self.state = .scanning(done: done, total: total)
+            }
         }
     }
 

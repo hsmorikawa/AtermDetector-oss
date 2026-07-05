@@ -33,6 +33,26 @@ actor CountingProber: AtermProbing {
     }
 }
 
+/// 起動直後のローカルネットワーク権限レースを模擬するプローバ。
+/// 最初の `activateAfter` 回の probe は nil を返し (= 権限有効化前で空振り)、
+/// それ以降のみ devices を返す (= 再スキャンで検出できる)。
+actor RaceProber: AtermProbing {
+    private var calls = 0
+    let activateAfter: Int
+    let devices: [String: AtermDevice]
+
+    init(devices: [String: AtermDevice], activateAfter: Int) {
+        self.devices = devices
+        self.activateAfter = activateAfter
+    }
+
+    func probe(ip: String) async -> AtermDevice? {
+        calls += 1
+        if calls <= activateAfter { return nil }
+        return devices[ip]
+    }
+}
+
 /// 固定のスキャン範囲を返すネットワーク情報。
 struct FakeNetworkInfo: NetworkInfoProviding {
     var range: ScanRange?
